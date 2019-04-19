@@ -1,0 +1,276 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  *               ii.                                         ;9ABH,          
+%  *              SA391,                                    .r9GG35&G          
+%  *              &#ii13Gh;                               i3X31i;:,rB1         
+%  *              iMs,:,i5895,                         .5G91:,:;:s1:8A         
+%  *               33::::,,;5G5,                     ,58Si,,:::,sHX;iH1        
+%  *                Sr.,:;rs13BBX35hh11511h5Shhh5S3GAXS:.,,::,,1AG3i,GG        
+%  *                .G51S511sr;;iiiishS8G89Shsrrsh59S;.,,,,,..5A85Si,h8        
+%  *               :SB9s:,............................,,,.,,,SASh53h,1G.       
+%  *            .r18S;..,,,,,,,,,,,,,,,,,,,,,,,,,,,,,....,,.1H315199,rX,       
+%  *          ;S89s,..,,,,,,,,,,,,,,,,,,,,,,,....,,.......,,,;r1ShS8,;Xi       
+%  *        i55s:.........,,,,,,,,,,,,,,,,.,,,......,.....,,....r9&5.:X1       
+%  *       59;.....,.     .,,,,,,,,,,,...        .............,..:1;.:&s       
+%  *      s8,..;53S5S3s.   .,,,,,,,.,..      i15S5h1:.........,,,..,,:99       
+%  *      93.:39s:rSGB@A;  ..,,,,.....    .SG3hhh9G&BGi..,,,,,,,,,,,,.,83      
+%  *      G5.G8  9#@@@@@X. .,,,,,,.....  iA9,.S&B###@@Mr...,,,,,,,,..,.;Xh     
+%  *      Gs.X8 S@@@@@@@B:..,,,,,,,,,,. rA1 ,A@@@@@@@@@H:........,,,,,,.iX:    
+%  *     ;9. ,8A#@@@@@@#5,.,,,,,,,,,... 9A. 8@@@@@@@@@@M;    ....,,,,,,,,S8    
+%  *     X3    iS8XAHH8s.,,,,,,,,,,...,..58hH@@@@@@@@@Hs       ...,,,,,,,:Gs   
+%  *    r8,        ,,,...,,,,,,,,,,.....  ,h8XABMMHX3r.          .,,,,,,,.rX:  
+%  *   :9, .    .:,..,:;;;::,.,,,,,..          .,,.               ..,,,,,,.59  
+%  *  .Si      ,:.i8HBMMMMMB&5,....                    .            .,,,,,.sMr
+%  *  SS       :: h@@@@@@@@@@#; .                     ...  .         ..,,,,iM5
+%  *  91  .    ;:.,1&@@@@@@MXs.                            .          .,,:,:&S
+%  *  hS ....  .:;,,,i3MMS1;..,..... .  .     ...                     ..,:,.99
+%  *  ,8; ..... .,:,..,8Ms:;,,,...                                     .,::.83
+%  *   s&: ....  .sS553B@@HX3s;,.    .,;13h.                            .:::&1
+%  *    SXr  .  ...;s3G99XA&X88Shss11155hi.                             ,;:h&,
+%  *     iH8:  . ..   ,;iiii;,::,,,,,.                                 .;irHA  
+%  *      ,8X5;   .     .......                                       ,;iihS8Gi
+%  *         1831,                                                 .,;irrrrrs&@
+%  *           ;5A8r.                                            .:;iiiiirrss1H
+%  *             :X@H3s.......                                .,:;iii;iiiiirsrh
+%  *              r#h:;,...,,.. .,,:;;;;;:::,...              .:;;;;;;iiiirrss1
+%  *             ,M8 ..,....,.....,,::::::,,...         .     .,;;;iiiiiirss11h
+%  *             8B;.,,,,,,,.,.....          .           ..   .:;;;;iirrsss111h
+%  *            i@5,:::,,,,,,,,.... .                   . .:::;;;;;irrrss111111
+%  *            9Bi,:,,,,......                        ..r91;;;;;iirrsss1ss1111
+% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Author: Zeyu Xiao
+% Version: 1.0
+% Contact: zeyuxiao1997@gmail.com
+% License： (C)copyright 2019
+% Desc: 欢迎使用并扩散, 欢迎fork+star
+
+\documentclass[a4paper]{ltxdoc}
+\usepackage[UTF8, heading=true, scheme=plain, linespread=1.2, zihao=-4, fontset=fandol]{ctex}
+
+% counterwith重定义问题
+\let\counterwithout\relax
+\let\counterwithin\relax
+
+\usepackage[hidelinks]{hyperref}
+\usepackage{geometry, parskip, seqsplit, fancyhdr, etoolbox, tocloft}
+\usepackage{flafter, chngcntr, caption, multirow, graphicx}
+\usepackage{minted} % 代码高亮模块，若不需要就删去
+\usepackage[bottom]{footmisc} % 脚注放到页面最底部
+
+\counterwithin{figure}{section} % 图的编号按section编排 
+\counterwithin{table}{section} % 表的编号按section编排
+\DeclareCaptionFormat{smallformat}{\songti \small #1#2#3} % 宋体，五号
+
+\input{macro.tex}
+
+\captionsetup{
+	labelsep=quad, % caption去掉分隔符:
+	textformat=simple,
+	format=smallformat,
+}
+
+\ctexset{
+	space=auto,
+	section = {
+		format = \centering \heiti \sanhao \bfseries,
+		aftername = \hspace{0.5em},
+		afterindent = true,
+	},
+	subsection = {
+		format = \heiti \bfseries,
+		aftername = \hspace{0.4em},
+		afterindent = true,
+	},
+	subsubsection = {
+		format = \songti \bfseries,
+		aftername = \hspace{0.4em},
+		afterindent = true,
+	},
+}
+
+\geometry{left=3cm, right=3cm, top=2.54cm, bottom=2.54cm}
+
+\setmainfont{Times New Roman} % 英文字体
+
+
+\begin{document}
+\include{tex/cover}
+\include{tex/chinese_title}
+\include{tex/english_title}
+\include{tex/statement}
+
+
+% 这里是摘要
+\begin{abstract}
+合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼
+
+合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼合肥工业大学好牛逼
+
+
+\end{abstract}
+
+\begin{abstractEn}
+\seqsplit{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+\seqsplit{xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx}
+
+\end{abstractEn}
+
+% 目录
+{
+\tocloftpagestyle{empty}
+\setlength{\cftfignumwidth}{3.5em}
+\setlength{\cfttabnumwidth}{3.5em}
+\clearpage
+\tableofcontents
+\addtocontents{toc}{\protect\thispagestyle{empty}}
+\pagenumbering{gobble}
+
+\clearpage
+\listoffigures
+
+\clearpage
+\listoftables
+
+\pagenumbering{arabic}
+}
+
+% 设置页眉
+\newgeometry{left=2.8cm, right=2.8cm, top=3cm, bottom=3cm}
+\fancyhead{}
+\chead{\small 合肥工业大学毕业设计（论文）\vspace{0.3cm}}
+\pagestyle{fancy}
+
+% 正文
+{
+\setcounter{page}{1}
+% 重写section指令以便设置section段前1行间距，分页
+\pretocmd{\section}{\clearpage \vspace*{-2.0em}}{}{}
+
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0.5em}
+\setlength{\baselineskip}{22pt}
+
+\section{绪论}
+\subsection{ＸＸＸＸＸＸ}
+\subsubsection{ＸＸＸＸＸＸ}
+ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ。
+
+\begin{center}
+	.......\\
+	.......\\
+	.......
+\end{center}
+
+\section{ＸＸＸＸＸＸ}
+代码示例\footnote{这是脚注}
+\begin{minted}[
+	frame=lines,
+	framesep=2mm,
+	baselinestretch=1.2,
+	fontsize=\footnotesize,
+	linenos
+]{python}
+
+import numpy as np
+
+def incmatrix(genl1,genl2):
+    m = len(genl1)
+    n = len(genl2)
+    M = None #to become the incidence matrix
+    VT = np.zeros((n*m,1), int)  #dummy variable
+
+    #compute the bitwise xor matrix
+    M1 = bitxormatrix(genl1)
+    M2 = np.triu(bitxormatrix(genl2),1)
+
+    for i in range(m-1):
+        for j in range(i+1, m):
+            [r,c] = np.where(M2 == M1[i,j])
+            for k in range(len(r)):
+                VT[(i)*n + r[k]] = 1;
+                VT[(i)*n + c[k]] = 1;
+                VT[(j)*n + r[k]] = 1;
+                VT[(j)*n + c[k]] = 1;
+
+                if M is None:
+                    M = np.copy(VT)
+                else:
+                    M = np.concatenate((M, VT), 1)
+
+                VT = np.zeros((n*m,1), int)
+
+    return M
+\end{minted}
+
+
+图示例
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{images/example_figure1.png}
+	\caption{酶解时间对DH与ACE抑制率的影响}
+\end{figure}
+
+\begin{figure}[!htb]
+	\centering
+	\includegraphics{images/example_figure2.png}
+	\caption{ＸＸＸＸＸＸＸＸＸＸ}
+\end{figure}
+
+\clearpage
+表示例
+\begin{table}[!htb]
+\centering
+\caption{三种肌球蛋白/多糖混合凝胶的红外光谱数据}
+\begin{tabular}{lcccc}
+\hline
+Treatment           & \multicolumn{4}{c}{FT-IR spectra numbers (cm$^{−1}$)} \\ \cline{2-5} 
+                    & PK1        & PK2        & PK3        & PK4       \\ \hline
+Myosin gel          & 3439       & —          & 1655       & 1106      \\
+Myosin+ 1\% KCG gel & 3358       & 3006       & 1655       & 1131      \\
+Myosin+ 1\% LBG gel & 3366       & 3006       & 1655       & 1106      \\
+Myosin+ 1\% WSC gel & 3439       & —          & 1655       & 1106      \\ \hline
+\end{tabular}
+\end{table}
+
+\begin{table}[!htb]
+\centering
+\caption{分栏表}
+\begin{tabular}{ccccc}
+\hline
+年度                    & 产品  & 产量    & 销量    & 产值  \\ \hline
+\multirow{2}{*}{2004} & 手机  & 11000 & 10000 & 500 \\
+                      & 计算机 & 1100  & 1000  & 280 \\ \hline
+\multirow{2}{*}{2005} & 手机  & 16000 & 13000 & 550 \\
+                      & 计算机 & 2100  & 1500  & 320 \\ \hline
+\end{tabular}
+\end{table}
+}
+
+% 参考文献
+{
+\clearpage % 分页
+\phantomsection % 使得hyperref目录能够跳转到正确的位置
+\addcontentsline{toc}{section}{参考文献} % 添加到目录中
+\nocite{*} % 添加所有文献
+%\bibliographystyle{gbt7714-2005} % 样式
+\bibliographystyle{bib/gbt7714-2005} % 样式
+\bibliography{bib/ref.bib}    % 文献数据库
+}
+
+% 致谢
+\begin{acknowledge}
+本论文是在指导老师ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ。
+
+ＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸＸ。
+\end{acknowledge}
+
+% 附录，必要时
+\begin{appendix}
+【说明：以下内容可放在附录之内：(1) 正文内过于冗长的公式推导；(2) 方便他人阅读所需的辅助性数学工具或表格；(3) 重复性数据和图表；(4) 论文使用的主要符号的意义和单位；(5) 程序说明和程序全文。可按"附录1  XXX"、"附录2  XXX"、……，分章书写。如无需附录，请删除此页。】
+\end{appendix}
+
+\end{document}

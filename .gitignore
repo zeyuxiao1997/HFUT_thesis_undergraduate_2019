@@ -1,0 +1,12 @@
+*.aux
+*.log
+*.swp
+*.lof
+*.lot
+*.out
+*.toc
+*.blg
+*.xdv
+*.bbl
+_minted-main
+.DS_Store
